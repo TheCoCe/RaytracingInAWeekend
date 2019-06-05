@@ -1,3 +1,4 @@
+
 solution "RaytracingInAWeekend"
 	configurations { "Debug", "Release" }
 	platforms { "x64" }
@@ -84,13 +85,28 @@ project "RaytracingInAWeekend"
 	targetname "RaytracingInAWeekend"
 	language "C++"
 	kind "ConsoleApp"
+	
 	files
 	{
 		"../src/**.h", "../src/**.cpp",
 	}
+	
+	includedirs
+	{
+		-- 
+	}
+	
+	defines
+	{
+		-- 
+	}
 		
 	configuration { "vs*", "x64" }
 	targetdir "../bin/Win64"
+	libdirs
+		{
+			-- "../externals/......",
+		}
 		links
 		{			
 			"kernel32",
